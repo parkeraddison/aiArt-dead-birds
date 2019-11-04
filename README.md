@@ -6,13 +6,13 @@ Parker Addison, pgaddiso@ucsd.edu
 
 Include your abstract here. This should be one paragraph clearly describing your concept, method, and results. This should tell us what architecture/approach you used. Also describe your creative goals, and whether you were successful in achieving them. Also could describe future directions.
 
-I have a few ideas for generative audio, all of which involve bird songs/calls.
+My idea is to circularly interpolate between birdsongs and couple these with visualizations in order to create a looping birdsong experience.
 
-1. Use autoencoders to either generate new birdsongs by traversing the latent space; or to convert spoken audio into bird songs by either attempting to encode and decode spoken audio with an autoencoder trained on birdsongs (1), or by creating a secondary autoencoder trained on spoken audio (2) which reduces to the same dimensionality as the one on birdsongs then using (2) to encode spoken audio and (1) to decode.
+To do this, I will use UCSD PhD student Tim Sainburg's work on [Animal Vocalization Generative Networks (AVGNs)](https://github.com/timsainb/AVGN).  His work involves segmenting birdsong audio into syllables, and then using a variety of autoencoders to cluster, visualize, and generate birdsongs.
 
-2. **Continuing the work of a UCSD PhD student on Animal Vocalization Generative Networks (AVGNs) which I stumbled upon while looking at birdsong datasets: https://github.com/timsainb/AVGN.  His work involves segmenting birdsong audio into syllables, and then using a variety of autoencoders to cluster, visualize, and generate birdsongs.  I've already fallen in love with the visualizations, and think that they can produce an interesting video or panelled exhibit in which you experience how both visually and aurally a birdsong transitions from one to another—similar to MIDI interpolation we saw in class.**
+By traversing through the latent space of the autoencoders (both the audio- and visual-ideal networks) I can interpolate between specific birdsongs, and I can produce a looping experience by making sure to conclude my trip through the latent space at the point what I started.
 
-3. Something involving both birdsongs and Mozart piano music.  I know it's not a lot to go off of, but I know that Mozart had a pet starling and he was inspired by its songs.  If I come up with something interesting, then there's a least a good story to back the art up with.
+I would like to attach additional meaning to this by perhaps highlighting birdsongs from birds whose populations are being threatened by climate change, or (if I can find an adequate dataset) by interpolating through time to hear how a single species' song has changed as its habitat has been encroached on.
 
 ## Model/Data
 
@@ -43,6 +43,17 @@ Any implementation details or notes we need to repeat your work.
 ## Reference
 
 References to any papers, techniques, repositories you used:
-- Papers
-- Repositories
-- Blog posts
+
+Tim Sainburg's Animal Vocalizations Generative Network:
+- [1] https://github.com/timsainb/AVGN
+
+Similar ideas/art projects involving ML and birdsgons:
+- [2] https://www.theguardian.com/environment/2019/oct/20/artist-creates-deepfake-birdsong-highlight-threat-dawn-chorus
+- [3] https://www.curf.upenn.edu/project/li-carol-generative-neural-network-autoencoder-novel-song-production-and-visualization
+
+
+Potential Datasets:
+- https://www.kaggle.com/rtatman/british-birdsong-dataset
+- https://figshare.com/articles/Bengalese_Finch_song_repository/4805749
+- https://data.gov.au/dataset/ds-dga-1bcc5cc5-7f90-4542-bdc8-93898e8108e4/details
+- https://www.xeno-canto.org/
