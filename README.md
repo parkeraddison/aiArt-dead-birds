@@ -29,7 +29,7 @@ See `proj2.ipynb`.
 
 ## Results
 
-See `output.wav`, `spectro.png`.
+See `output2.wav`, `spectro.png`.
 
 Both are representations of the final interpolated audio.
 
